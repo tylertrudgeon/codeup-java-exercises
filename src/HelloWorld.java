@@ -35,9 +35,15 @@ public class HelloWorld {
 
         int x = 10;
         int y = 2;
-        x = x / y;
-        y = y - x;
+//        x = x / y;
+//        y = y - x;
 
+        int newInt = x / y;
+
+        int nextInt = y - x;
+
+        System.out.println(newInt);
+        System.out.println(nextInt);
 
 
 
