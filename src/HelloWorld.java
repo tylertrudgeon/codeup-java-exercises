@@ -39,13 +39,15 @@ public class HelloWorld {
 //        y = y - x;
 
         int newInt = x / y;
-
         int nextInt = y - x;
 
         System.out.println(newInt);
         System.out.println(nextInt);
 
+        byte smallNumber = 127;
 
+        smallNumber++;
+        System.out.println(smallNumber);
 
     }
 }
