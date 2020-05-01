@@ -30,7 +30,7 @@ public class ConsoleExercises {
         System.out.println("Please enter the height of the classroom");
         float height = scanner.nextFloat();
 
-        System.out.printf("The area of the classroom is %.2f \n", length*width);
+        System.out.printf("The area of the classroom is %.2f \n", length * width);
         System.out.printf("The perimeter of the classroom is %.2f \n", (length * length) + (width * width));
         System.out.printf("The volume of the classroom is %.2f \n", length * width * height);
 
