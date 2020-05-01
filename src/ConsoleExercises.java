@@ -6,6 +6,7 @@ public class ConsoleExercises {
         System.out.printf("The value of pi is approximately %.2f.\n", pi);
 
         Scanner scanner = new Scanner(System.in);
+        scanner.useDelimiter("\n");
         System.out.print("Please type a sentence: ");
         String userSentence = scanner.nextLine();
         System.out.println(userSentence);
@@ -26,9 +27,12 @@ public class ConsoleExercises {
         float length = scanner.nextFloat();
         System.out.println("Please enter the width of the classroom.");
         float width = scanner.nextFloat();
+        System.out.println("Please enter the height of the classroom");
+        float height = scanner.nextFloat();
 
         System.out.printf("The area of the classroom is %.2f \n", length*width);
-        System.out.printf("The perimeter of the classroom is %.2f", (length * length) + (width * width));
+        System.out.printf("The perimeter of the classroom is %.2f \n", (length * length) + (width * width));
+        System.out.printf("The volume of the classroom is %.2f \n", length * width * height);
 
     }
 }
