@@ -29,7 +29,7 @@ public class HelloWorld {
 //        int x = 3;
 //        int y = 4;
 //
-//        int newInt = y * x;
+//          y *= x;
 //
 //        System.out.println(newInt);
 
@@ -38,11 +38,11 @@ public class HelloWorld {
 //        x = x / y;
 //        y = y - x;
 
-        int newInt = x / y;
-        int nextInt = y - x;
+        x /= y;
+        y -= x;
 
-        System.out.println(newInt);
-        System.out.println(nextInt);
+        System.out.println(x);
+        System.out.println(y);
 
         byte smallNumber = 127;
 
