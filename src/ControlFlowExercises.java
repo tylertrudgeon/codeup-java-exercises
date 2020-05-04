@@ -8,13 +8,11 @@ public class ControlFlowExercises {
 //            i++;
 //        }
 
-        int i = 100;
-        do {
-            if (i % 5 == 0) {
-                System.out.println("i = " + i);
-            }
-            i--;
-        } while (i >= (-10));
+//        int i = 2;
+//        do {
+//            System.out.println("i = " + (i * i));
+//            i++;
+//        } while (i < 1000000);
 
     }
 }
