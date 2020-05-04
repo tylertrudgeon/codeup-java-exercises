@@ -54,5 +54,12 @@ public class ControlFlowExercises {
 //            System.out.println(row);
 //        }
 
+//        long counter = 2;
+//
+//        do {
+//            System.out.println(counter);
+//            counter *= counter;
+//        } while (counter < 1000000);
+//
     }
 }
