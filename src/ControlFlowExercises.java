@@ -8,13 +8,13 @@ public class ControlFlowExercises {
 //            i++;
 //        }
 
-        int i = 0;
+        int i = 100;
         do {
-            if (i % 2 == 0) {
+            if (i % 5 == 0) {
                 System.out.println("i = " + i);
             }
-            i++;
-        } while (i <= 100);
+            i--;
+        } while (i >= (-10));
 
     }
 }
