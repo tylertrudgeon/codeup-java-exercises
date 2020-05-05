@@ -8,10 +8,6 @@ public class Bob {
         System.out.println("Ask Bob a question.");
         String question = scanner.nextLine();
 
-        boolean userContinue = true;
-
-        do {
-
             if (question.endsWith("?")) {
                 System.out.println("Sure.");
             } else if (question.endsWith("!")) {
@@ -21,14 +17,6 @@ public class Bob {
             } else {
                 System.out.println("Whatever.");
             }
-
-            System.out.println("Would you like to ask Bob another question? (y/n)");
-            String userInput = scanner.next();
-            if (!userInput.equalsIgnoreCase("y")) {
-                userContinue = false;
-            }
-
-        } while (userContinue);
 
     }
 }
