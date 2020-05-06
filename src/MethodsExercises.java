@@ -14,7 +14,7 @@ public class MethodsExercises {
 //        System.out.println(modulus(8,2));
 //        getInteger(1, 10);
 //        calculateFactorial(scanner);
-        rollDice();
+        rollDice(scanner);
 
     }
 
@@ -84,24 +84,23 @@ public class MethodsExercises {
         } while (userConfirmation);
     }
 
-    public static void rollDice() {
+    public static void rollDice(Scanner scan) {
         boolean userConfirmation = true;
 
         do {
-            Scanner scanner = new Scanner(System.in);
             System.out.println("Number of sides for the dice.");
-            int numberOfSides = scanner.nextInt();
+            int numberOfSides = scan.nextInt();
 
             Random roll = new Random();
 
-            int firstDice = roll.nextInt(numberOfSides);
-            int secondDice = roll.nextInt(numberOfSides);
+            int firstDice = roll.nextInt(numberOfSides) + 1;
+            int secondDice = roll.nextInt(numberOfSides) + 1;
 
             System.out.println("Your first dice rolled: " + firstDice);
             System.out.println("Your second dice rolled: " + secondDice);
 
             System.out.println("Would you like to roll again? (y/n)");
-            String userResponse = scanner.next();
+            String userResponse = scan.next();
             if (!userResponse.equalsIgnoreCase("y")) {
                 userConfirmation = false;
             }
