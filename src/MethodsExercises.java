@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -12,7 +13,8 @@ public class MethodsExercises {
 //        System.out.println(divide(10, 2));
 //        System.out.println(modulus(8,2));
 //        getInteger(1, 10);
-        calculateFactorial(scanner);
+//        calculateFactorial(scanner);
+        rollDice();
 
     }
 
@@ -59,22 +61,20 @@ public class MethodsExercises {
     public static void calculateFactorial(Scanner scanner) {
         boolean userConfirmation = true;
 
-
-
         do {
             System.out.println("Enter a number between 1 and 10: ");
             int userInput = scanner.nextInt();
 
             int newInput = userInput;
 
-            if (userInput > 0 && userInput < 10) {
+            if (userInput > 0 && userInput <= 10) {
                 for (long i = 1; i < newInput; i++) {
                     userInput *= i;
                 }
                 System.out.println(userInput);
             }
 
-            System.out.println("Would you like to continue?");
+            System.out.println("Would you like to continue? (y/n)");
             String userResponse = scanner.next();
 
             if (!userResponse.equalsIgnoreCase("y")) {
@@ -84,6 +84,29 @@ public class MethodsExercises {
         } while (userConfirmation);
     }
 
+    public static void rollDice() {
+        boolean userConfirmation = true;
 
+        do {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Number of sides for the dice.");
+            int numberOfSides = scanner.nextInt();
+
+            Random roll = new Random();
+
+            int firstDice = roll.nextInt(numberOfSides);
+            int secondDice = roll.nextInt(numberOfSides);
+
+            System.out.println("Your first dice rolled: " + firstDice);
+            System.out.println("Your second dice rolled: " + secondDice);
+
+            System.out.println("Would you like to roll again? (y/n)");
+            String userResponse = scanner.next();
+            if (!userResponse.equalsIgnoreCase("y")) {
+                userConfirmation = false;
+            }
+
+        } while (userConfirmation);
+    }
 
 }
