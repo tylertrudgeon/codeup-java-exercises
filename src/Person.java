@@ -6,12 +6,6 @@ public class Person {
         this.name = name;
     }
 
-    public static void main(String[] args) {
-        Person Tyler = new Person ("Tyler");
-        System.out.println(Tyler);
-
-    }
-
     public String getName() {
         return name;
     }
@@ -21,6 +15,31 @@ public class Person {
     }
 
     public void sayHello() {
-        System.out.println(name);
+        System.out.printf("Hello %s!", this.name);
+    }
+
+    public static void main(String[] args) {
+        Person tyler = new Person ("Tyler");
+        System.out.println(tyler.getName());
+        tyler.setName("bill");
+        tyler.sayHello();
+
+//        Person person1 = new Person("John");
+//        Person person2 = new Person("John");
+//        System.out.println(person1.getName().equals(person2.getName()));
+//        System.out.println(person1 == person2);
+
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1 == person2);
+
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1.getName());
+//        System.out.println(person2.getName());
+//        person2.setName("Jane");
+//        System.out.println(person1.getName());
+//        System.out.println(person2.getName());
+
     }
 }
