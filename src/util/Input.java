@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Input {
 
-    private static Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
     public void getString() {
         System.out.println("Text here: ");

@@ -1,7 +1,5 @@
 package shapes;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 public class Circle {
@@ -20,13 +18,13 @@ public class Circle {
 
     public double getArea(){
         double area = Math.PI * (radius*radius);
-        System.out.println("Area = " + area);
+        System.out.printf("Area = %.2f\n", area);
         return area;
     }
 
     public double getCircumference(){
         double circumference = 2 * Math.PI * radius;
-        System.out.println("Circumference = " + circumference);
+        System.out.printf("Circumference = %.2f\n", circumference);
         return circumference;
     }
 }
