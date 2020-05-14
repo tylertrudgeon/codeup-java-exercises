@@ -6,20 +6,17 @@ public class Input {
 
     private Scanner scanner = new Scanner(System.in);
 
-    public void getString() {
+    public String getString() {
         System.out.println("Text here: ");
         String text = scanner.nextLine();
         System.out.println(text);
+        return text;
     }
 
-    public void yesNo(){
-        System.out.println("yes or no?");
+    public boolean yesNo(){
+        System.out.println("Continue? y/n");
         String answer = scanner.nextLine();
-        if (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes")) {
-            System.out.println("true");
-        } else {
-            System.out.println("false");
-        }
+        return answer.equals("y") ? true : false;
     }
 
     public int getInt (int min, int max){
