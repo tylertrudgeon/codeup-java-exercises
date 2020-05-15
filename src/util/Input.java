@@ -6,11 +6,9 @@ public class Input {
 
     private Scanner scanner = new Scanner(System.in);
 
-    public String getString() {
-        System.out.println("Text here: ");
-        String text = scanner.nextLine();
-        System.out.println(text);
-        return text;
+    public String getString(){
+        System.out.println("Type something: ");
+        return scanner.nextLine();
     }
 
     public boolean yesNo(){
@@ -21,37 +19,50 @@ public class Input {
 
     public int getInt (int min, int max){
         System.out.println("Please enter a number between " + min + " and " + max +": ");
-        int num = scanner.nextInt();
-        if(num < min || num > max) {
+        int numB;
+        try {
+            numB = Integer.valueOf(getString());
+        } catch (Exception e) {
+            return getInt(min, max);
+        }
+        if(numB < min || numB > max) {
             System.out.println("Not a valid number.");
             getInt(min, max);
-        } else {
-            System.out.println("Good job.");
         }
-        return num;
+        return numB;
     }
 
-    public void getInt (){
+    public int getInt (){
         System.out.println("Please enter a number: ");
-        int num = scanner.nextInt();
-        System.out.println("Here's your number: " + num);
-    }
-
-    public void getDouble (double minD, double maxD){
-        System.out.println("Please enter a number between " + minD + " and " + maxD +": ");
-        double num = scanner.nextDouble();
-        if(num < minD || num > maxD) {
-            System.out.println("Not a valid number.");
-            getDouble(minD, maxD);
-        } else {
-            System.out.println("Good job.");
+        try {
+            return Integer.valueOf(getString());
+        } catch (Exception e) {
+            return getInt();
         }
     }
 
-    public void getDouble (){
+    public double getDouble (double minD, double maxD){
+        System.out.println("Please enter a number between " + minD + " and " + maxD +": ");
+        double aDecimal;
+        try {
+            aDecimal = Double.valueOf(getString());
+        } catch (Exception e) {
+            return getDouble(minD, maxD);
+        }
+        if(aDecimal < minD || aDecimal > maxD) {
+            System.out.println("Not a valid number.");
+            return getDouble(minD, maxD);
+        }
+        return aDecimal;
+    }
+
+    public double getDouble (){
         System.out.println("Please enter a decimal: ");
-        double num = scanner.nextDouble();
-        System.out.println("Here's your decimal: " + num);
+        try {
+            return Double.valueOf(getString());
+        } catch (Exception e) {
+            return getDouble();
+        }
     }
 
 
